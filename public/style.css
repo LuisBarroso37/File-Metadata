@@ -1,54 +1,62 @@
-/****** Main Styling ******/
-
 body {
 	font-family: 'Roboto', sans-serif;
-	font-size: 16px;
+	font-size: 1em;
 	color: #222;
-	background-color: #ECF0F1;
-	text-align: center;
+	background-color: #ac4250;
+	line-height: 1.4em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .container {
-	padding: 0;
-	margin-top: 40px;
+  max-width: 750px;
+  margin-top: 2em;
+	padding: 1em 3em;
+  border: 2px black solid;
+  background: #f3d4ac;
+  text-align: center;
+  box-shadow: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
+              0.125em 0.125em 0.25em rgba(0,0,0,.15);
 }
 
-.footer {
-	margin-top: 60px;
+.text{
+  text-align: justify;
 }
 
-ol {
-	list-style-position: inside;
-}
-ul {
-	list-style-type: none;
+h2 {
+  margin-top: -.1em;
 }
 
-a {
-	color: #2574A9;
+code {
+  font-family: monospace;
+  padding: .15em;
+  color: black;
+  background-color: #fff;
 }
 
-input {
-  display: block;
-  position: relative;
-  margin: 10px auto;
+#upload-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+#inputfield {
+  padding: .5em;
+  min-width: 300px;
+  border: 1px black dotted;
 }
-input#button {
-  width: 230px;
-}
-.view {
-  position:relative;
-  margin: auto;
-  margin-top: 40px;
-  border: 1px  solid  #aaa;
-  padding: 20px;
-  width: 60%;
-  min-width: 400px;
-}
-/****** Logo Div Styling ******/
 
-img {
-	margin: 20px auto 0 auto;
-	display: block;
+#button {
+  font-weight: bold;
+  color: white;
+  padding: .25em;
+  margin-top: 1em;
+  width: 70px;
+  background-color: #a4303f;
+  border: 1px #a4303f solid;
+  border-radius: 5px;
+  cursor: pointer;
 }
+

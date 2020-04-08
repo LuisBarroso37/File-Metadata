@@ -3,22 +3,24 @@ const router = express.Router();
 const multer = require('multer');
 
 const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
+  destination: (req, file, cb) => {
     cb(null, 'uploads');
   },
-  filename: function (req, file, cb) {
+  filename: (req, file, cb) => {
     cb(null, file.fieldname + '-' + Date.now());
   }
 });
 
 const upload = multer({ storage: storage });
 
+// User story 1 - I can submit a form object that includes a file upload
 router.post('/api/fileanalyse', upload.single('upfile'), (req, res) => {
   let file = req.file;
   if(!file) {
     res.status(400).send('Please upload a file');
   } else {
-    res.send({filename: file.filename, size: file.size});
+// User story 3 - When I submit something, I will receive the file name, and size in bytes within the JSON response.
+    res.json({filename: file.filename, size: file.size});
   }
 });
 
